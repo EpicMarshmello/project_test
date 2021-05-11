@@ -1,0 +1,63 @@
+body {
+  font-family: sans-serif;
+  background-image: url("https://i.pinimg.com/originals/e5/85/84/e58584ee0b5c3b44a4817b88da2c7d0a.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.topHead {
+  text-align: center;
+}
+
+.dek {
+  margin: auto;
+  background-color: azure;
+  border: 4px solid cadetblue;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#content {
+  height: 400px;
+  margin: 20px 30px;
+}
+
+#campaign {
+  height: 400px;
+  margin: 20px 30px;
+}
+
+#surveyStart {
+  height: 400px;
+  margin: 20px 30px;
+  flex-direction: column;
+}
+
+#surveyBox {
+  height: 600px;
+  margin: 20px 30px;
+  padding: 20px 120px;
+}
+
+button {
+  border: 4px solid rgb(141, 216, 148);
+  border-radius: 25px;
+  color: white;
+  background-color: rgb(141, 216, 148);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 35px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: white;
+  color: rgb(141, 216, 148);
+  cursor: pointer;
+}
