@@ -41,24 +41,40 @@ body {
   height: auto;
   margin: 20px 30px;
   padding: 20px 120px;
+  text-align: left;
+  justify-content: left;
+  display: none;
 }
 
 button {
   border: 4px solid rgb(141, 216, 148);
   border-radius: 25px;
-  color: white;
-  background-color: rgb(141, 216, 148);
+  color: rgb(141, 216, 148);
+  background-color: white;
   padding: 15px 32px;
   margin: 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 35px;
   transition-duration: 0.4s;
 }
 
 button:hover {
-  background-color: white;
-  color: rgb(141, 216, 148);
+  background-color: rgb(141, 216, 148);
+  color: white;
   cursor: pointer;
+}
+
+.ansBtn {
+  width: inherit;
+  text-align: left;
+}
+
+
+#question {
+  margin: 30px;
+}
+
+#quizChoice {
+  width: 100%;
 }
