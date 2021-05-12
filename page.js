@@ -1,100 +1,109 @@
-window.onload = function () {
-  var startBtn = document.getElementById("myBtn");
-  var startaa = false;
-  startBtn.addEventListener("click", function () {
-    if (startaa == false) {
-      startQuiz();
-      startaa = true;
-      console.log("Start!");
-    }
-  });
-
-  console.log("JS loaded1");
-};
+//variable declare
+{
+  var questionShowing = 1;
+  var boxx;
+  var textZa;
+  var startBox;
+  var questionText;
+  var choiceA;
+  var choiceB;
+  var choiceC;
+  var backBtn;
+  var ansSelected = [];
+  var startBtn;
+  var correctAns = [
+    "1choA",
+    "2choB",
+    "3choA",
+    "4choB",
+    "5choB",
+    "6choC",
+    "7choB",
+    "8choA",
+    "9choB",
+    "10choA",
+  ];
+}
 
 var questionArray = [
   { ass: "you suck" },
   {
     questionNo: 1,
-    question:
-      " This is question number 1. Who is my favourite Japanese Music Artist?",
-    ansA: "Answer A : I love Yuko Ando",
-    ansB: "Answer B : I love Lefty Hand Cream",
-    ansC: "Answer C : I love Secret Base",
+    question: " This is question number 1111111111?",
+    ansA: "Answer A : correct",
+    ansB: "Answer B : incorrect",
+    ansC: "Answer C : incorrect",
   },
   {
     questionNo: 2,
-    question: " This is question number 2. What is my favourite dessert?",
-    ansA: "Answer A : I love daifuku",
-    ansB: "Answer B : I love Ice-cream",
-    ansC: "Answer C : I love eclair",
+    question: " This is question number 2222222222?",
+    ansA: "Answer A : incorrect",
+    ansB: "Answer B : correct",
+    ansC: "Answer C : incorrect",
   },
   {
     questionNo: 3,
-    question: " This is question number 3333333333333?",
-    ansA: "Answer A : I love 33333333",
-    ansB: "Answer B : I love 33333333",
-    ansC: "Answer C : I love 33333333",
+    question: " This is question number 3333333333?",
+    ansA: "Answer A : correct",
+    ansB: "Answer B : incorrect",
+    ansC: "Answer C : incorrect",
   },
   {
     questionNo: 4,
-    question: " This is question number 44444444444444?",
-    ansA: "Answer A : I love 4",
-    ansB: "Answer B : I love 4",
-    ansC: "Answer C : I love 4",
+    question: " This is question number 4444444444?",
+    ansA: "Answer A : incorrect",
+    ansB: "Answer B : correct",
+    ansC: "Answer C : incorrect",
   },
   {
     questionNo: 5,
-    question: " This is question number 55555555555555?",
-    ansA: "Answer A : I love 55555555",
-    ansB: "Answer B : I love 55555555",
-    ansC: "Answer C : I love 55555555",
+    question: " This is question number 5555555555?",
+    ansA: "Answer A : incorrect",
+    ansB: "Answer B : correct",
+    ansC: "Answer C : incorrect",
   },
   {
     questionNo: 6,
-    question: " This is question number 6666666666666?",
-    ansA: "Answer A : I love 66666666",
-    ansB: "Answer B : I love 66666666",
-    ansC: "Answer C : I love 66666666",
+    question: " This is question number 6666666666?",
+    ansA: "Answer A : incorrect",
+    ansB: "Answer B : incorrect",
+    ansC: "Answer C : correct",
   },
   {
     questionNo: 7,
-    question: " This is question number 7777777777777?",
-    ansA: "Answer A : I love 77777777",
-    ansB: "Answer B : I love 77777777",
-    ansC: "Answer C : I love 77777777",
+    question: " This is question number 7777777777?",
+    ansA: "Answer A : incorrect",
+    ansB: "Answer B : correct",
+    ansC: "Answer C : incorrect",
   },
   {
     questionNo: 8,
-    question: " This is question number 88888888888888?",
-    ansA: "Answer A : I love 888888888",
-    ansB: "Answer B : I love 888888888",
-    ansC: "Answer C : I love 888888888",
+    question: " This is question number 8888888888?",
+    ansA: "Answer A : correct",
+    ansB: "Answer B : incorrect",
+    ansC: "Answer C : incorrect",
   },
   {
     questionNo: 9,
-    question: " This is question number 9999999999999?",
-    ansA: "Answer A : I love 99999999",
-    ansB: "Answer B : I love 99999999",
-    ansC: "Answer C : I love 99999999",
+    question: " This is question number 9999999999?",
+    ansA: "Answer A : incorrect",
+    ansB: "Answer B : correct",
+    ansC: "Answer C : incorrect",
   },
   {
     questionNo: 10,
     question: " This is question number 10 10 10 10 10?",
-    ansA: "Answer A : I love 10 10 10 10 10 10",
-    ansB: "Answer B : I love 10 10 10 10 10 10",
-    ansC: "Answer C : I love 10 10 10 10 10 10",
+    ansA: "Answer A : correct",
+    ansB: "Answer B : incorrect",
+    ansC: "Answer C : incorrect",
   },
 ];
 
-var questionShowing = 1;
-var boxx;
-var startBox;
-var questionText;
-var choiceA;
-var choiceB;
-var choiceC;
-var backBtn;
+window.onload = function () {
+  startBtn = document.getElementById("myBtn");
+  startBtn.setAttribute("onclick", "startQuiz()");
+  console.log("JS loaded");
+};
 
 function caller() {
   questionText = document.getElementById("question");
@@ -102,6 +111,14 @@ function caller() {
   choiceB = document.getElementById("choB");
   choiceC = document.getElementById("choC");
   backBtn = document.getElementById("backz");
+  textZa = document.getElementById("textZa");
+}
+
+function changeChoice() {
+  questionText.innerHTML = questionArray[questionShowing].question;
+  choiceA.innerHTML = questionArray[questionShowing].ansA;
+  choiceB.innerHTML = questionArray[questionShowing].ansB;
+  choiceC.innerHTML = questionArray[questionShowing].ansC;
 }
 
 function startQuiz() {
@@ -111,29 +128,21 @@ function startQuiz() {
   boxx.style.display = "flex";
   caller();
 
-  choiceA.setAttribute("onclick", "nextQuestion()");
-  choiceB.setAttribute("onclick", "nextQuestion()");
-  choiceC.setAttribute("onclick", "nextQuestion()");
+  choiceA.setAttribute("onclick", "nextQuestion(this.id)");
+  choiceB.setAttribute("onclick", "nextQuestion(this.id)");
+  choiceC.setAttribute("onclick", "nextQuestion(this.id)");
   backBtn.style.display = "none";
 
-  questionText.innerHTML = questionArray[questionShowing].question;
-  choiceA.innerHTML = questionArray[questionShowing].ansA;
-  choiceB.innerHTML = questionArray[questionShowing].ansB;
-  choiceC.innerHTML = questionArray[questionShowing].ansC;
+  changeChoice();
 }
 
-function nextQuestion() {
+function nextQuestion(selected) {
+  ansSelected.push(questionShowing + selected);
   if (questionShowing < 10) {
     questionShowing++;
-    console.log("Question " + questionShowing + " answered.");
-
-    questionText.innerHTML = questionArray[questionShowing].question;
-    choiceA.innerHTML = questionArray[questionShowing].ansA;
-    choiceB.innerHTML = questionArray[questionShowing].ansB;
-    choiceC.innerHTML = questionArray[questionShowing].ansC;
+    changeChoice();
     if (questionShowing == 2) {
       backBtn.style.display = "inline-block";
-      console.log("no no square");
     }
   } else {
     quizFin();
@@ -141,21 +150,40 @@ function nextQuestion() {
 }
 
 function backQuestion() {
+  ansSelected.pop();
   questionShowing--;
-  questionText.innerHTML = questionArray[questionShowing].question;
-  choiceA.innerHTML = questionArray[questionShowing].ansA;
-  choiceB.innerHTML = questionArray[questionShowing].ansB;
-  choiceC.innerHTML = questionArray[questionShowing].ansC;
+  changeChoice();
   console.log("question " + (questionShowing + 1) + " showing");
-
   if (questionShowing == 1) {
     backBtn.style.display = "none";
   }
 }
 
 function quizFin() {
-  document.getElementById("quizChoice").style.display = "none";
+  boxx.style.display = "none";
+  startBox.style.display = "flex";
+  var calScore = ansCheck();
+  textZa.innerHTML = "Your scores is " + calScore + " .";
+  startBtn.innerHTML = "Try again";
+  startBtn.setAttribute("onclick", "restartX()");
+}
+
+function ansCheck() {
+  var score = 0;
+  for (let runner = 0; runner < ansSelected.length; runner++) {
+    if (ansSelected[runner] == correctAns[runner]) {
+      score++;
+    }
+  }
+  return score;
+}
+
+function restartX() {
+  startBox.style.display = "none";
+  boxx.style.display = "flex";
+  questionShowing = 1;
+  ansSelected = [];
   backBtn.style.display = "none";
-  boxx.style.justifyContent = "center";
-  questionText.innerHTML = "Quiz finish <br> You Suck!!!";
+  
+  changeChoice();
 }
