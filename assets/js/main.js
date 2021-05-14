@@ -457,6 +457,9 @@ function restartX() {
 }
 
 function showAns() {
+  questionShowing = 1;
+  ansSelected = [];
+  changeChoice();
   startBox.style.display = "none";
   realBox.style.display = "grid";
   choiceA.disable = "true";
