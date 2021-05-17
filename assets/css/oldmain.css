@@ -249,10 +249,10 @@ input,
 select,
 textarea {
   color: #000000;
-  font-family: "Itim", sans-serif;
-  font-size: 1.15rem;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 1rem;
   font-weight: 300;
-  /* letter-spacing: 0.0375em; */
+  letter-spacing: 0.0375em;
   line-height: 2;
 }
 
@@ -293,7 +293,7 @@ h4,
 h5,
 h6 {
   color: #000000;
-  font-family: "Chonburi", sans-serif;
+  font-family: "Raleway", Helvetica, sans-serif;
   font-weight: 600;
   letter-spacing: 0.175em;
   line-height: 1.75;
@@ -312,8 +312,8 @@ h6 a {
 }
 
 h1 {
-  font-family: "Chonburi", sans-serif;
-  font-size: 4rem;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 5rem;
   font-weight: 700;
   letter-spacing: -0.05em;
   line-height: 1.1;
@@ -322,7 +322,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 800;
   margin: 0 0 2rem 0;
 }
@@ -345,7 +345,7 @@ h6 {
 
 @media screen and (max-width: 736px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     line-height: 1.1;
   }
 
@@ -1951,11 +1951,11 @@ button,
   color: #000000 !important;
   cursor: pointer;
   display: inline-block;
-  font-family: "Itim", sans-serif;
+  font-family: "Raleway", Helvetica, sans-serif;
   /* font-size: 0.6rem; */
-  font-weight: 400;
+  font-weight: 600;
   height: fit-content;
-  /* letter-spacing: 0.175em; */
+  letter-spacing: 0.175em;
   line-height: 3rem;
   padding: 0 2rem;
   text-align: center;
@@ -2247,7 +2247,7 @@ label {
   font-family: "Raleway", Helvetica, sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
-  /* letter-spacing: 0.175em; */
+  letter-spacing: 0.175em;
   line-height: 1.75;
   margin: 0 0 1rem 0;
   text-transform: uppercase;
@@ -3363,9 +3363,9 @@ ul.feature-icons li:nth-child(2) {
 }
 
 #wrapper section > header h1 + p {
-  font-family: "Itim", sans-serif;
-  font-size: 1.5rem;
-  /* letter-spacing: 0.175em; */
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.175em;
   line-height: 2.5;
   text-transform: uppercase;
 }
@@ -3973,8 +3973,4 @@ body.is-ie #wrapper > section > .content > section {
   body.is-ie #wrapper section > footer {
     padding: 4rem;
   }
-}
-
-u {
-  color: deeppink !important;
 }

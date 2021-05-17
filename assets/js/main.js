@@ -189,29 +189,29 @@
   var userEmail;
   var userMessage;
   var correctAns = [
-    "1choA",
-    "2choB",
+    "1choC",
+    "2choA",
     "3choA",
-    "4choB",
-    "5choB",
-    "6choC",
-    "7choB",
-    "8choA",
-    "9choB",
-    "10choA",
+    "4choC",
+    "5choC",
+    "6choB",
+    "7choC",
+    "8choB",
+    "9choC",
+    "10choC",
   ];
   var highlighter = [
     "what",
+    "choCXL",
     "choAXL",
-    "choBXL",
     "choAXL",
-    "choBXL",
+    "choCXL",
+    "choCXL",
     "choBXL",
     "choCXL",
     "choBXL",
-    "choAXL",
-    "choBXL",
-    "choAXL",
+    "choCXL",
+    "choCXL",
   ];
 }
 
@@ -219,108 +219,108 @@ var questionArray = [
   { ass: "you suck" },
   {
     questionNo: 1,
-    question: " This is question number 1111111111?",
-    ansA: "Answer A : correct",
-    ansB: "Answer B : incorrect",
-    ansC: "Answer C : incorrect",
+    question: " 1.ควรขอ Consent ก่อนที่จะ.....",
+    ansA: "จับมือ",
+    ansB: "เล่นสัมพันธ์สวาท",
+    ansC: "ทุกข้อที่กล่าวมา",
     desText:
-      "ตัวเลือกที่เหมาะสมที่สุดคือ 11111111111111111111111111111111111111111",
+      "เพราะ Consent ควรขอก่อนจะมีการปฏิสัมพันธ์ในทุกกรณี",
   },
   {
     questionNo: 2,
-    question: " This is question number 2222222222?",
-    ansA: "Answer A : incorrect",
-    ansB: "Answer B : correct",
-    ansC: "Answer C : incorrect",
+    question: " 2.การขอ Consent ไม่ได้หมายถึงแค่การตอบตกลงหรือปฏิเสธอย่างเดียว มันรวมถึงการสื่อสารกับคู่นอนของคุณในสิ่งที่คุณทั้งคู่ต้องการ",
+    ansA: "ถูก",
+    ansB: "ผิด",
+    ansC: "ไม่ทราบ",
     desText:
-      "ตัวเลือกที่เหมาะสมที่สุดคือ 22222222222222222222222222222222222222222",
+      "มันคือการแสดงออกว่าเราเคารพคู่นอน และจะไม่บังคับให้ทำอะไรที่พวกเขาไม่อยากทำ",
   },
   {
     questionNo: 3,
-    question: " This is question number 3333333333?",
-    ansA: "Answer A : correct",
-    ansB: "Answer B : incorrect",
-    ansC: "Answer C : incorrect",
+    question: " 3.แล้ว Consent ต้องขอตอนไหนกันนะ?",
+    ansA: "ก่อนมีการสัมผัสทุกรูปแบบ(กอด, มีเพศสัมพันธ์ เป็นต้น)",
+    ansB: "เมื่อถึงเวลาที่คุณคิดว่าเหมาะ",
+    ansC: "ก่อนเริ่มมีเซ็กส์",
     desText:
-      "ตัวเลือกที่เหมาะสมที่สุดคือ 333333333333333333333333333333333333333333",
+      "ที่ต้องถามก่อน เพราะว่าเราต้องคิดเสมอว่าการกระทำของเราอาจส่งผลอะไรกับอีกฝ่าย",
   },
   {
     questionNo: 4,
-    question: " This is question number 4444444444?",
-    ansA: "Answer A : incorrect",
-    ansB: "Answer B : correct",
-    ansC: "Answer C : incorrect",
+    question: "4.คนกลุ่มไหนต้องขอ Consent ซึ่งกันและกันบ้าง?",
+    ansA: "คู่รักที่จะมีเซ็กส์กันเป็นครั้งแรก",
+    ansB: "คู่รักที่แต่งงานกันแล้ว",
+    ansC: "ทุกข้อที่กล่าวมา	",
     desText:
-      "ตัวเลือกที่เหมาะสมที่สุดคือ 4444444444444444444444444444444444444444444",
+      "ไม่ว่าจะแฟน เป็นสามีภรรยา เรื่อง Consent เป็นหัวใจสำคัญของการมีเพศสัมพันธ์",
   },
   {
     questionNo: 5,
-    question: " This is question number 5555555555?",
-    ansA: "Answer A : incorrect",
-    ansB: "Answer B : correct",
-    ansC: "Answer C : incorrect",
+    question: " 5.เมื่อพูดถึงเรื่องเซ็กส์ ควรจะถามเรื่องอะไรบ้าง?",
+    ansA: "การป้องกัน",
+    ansB: "สิ่งที่ชอบและไม่ชอบ",
+    ansC: "ทุกข้อที่กล่าวมา",
     desText:
-      "ตัวเลือกที่เหมาะสมที่สุดคือ 55555555555555555555555555555555555555555555",
+      "เราสามารถถามหัวข้อพวกนี้ได้หมดเลย เป็นเรื่องดีนะที่เราเปิดอกคุยกัน",
   },
   {
     questionNo: 6,
-    question: " This is question number 6666666666?",
-    ansA: "Answer A : incorrect",
-    ansB: "Answer B : incorrect",
-    ansC: "Answer C : correct",
+    question: " 6.การให้ Consent มีแค่การพูด ภาษากายและน้ำเสียงไม่นับ",
+    ansA: "ใช่",
+    ansB: "ไม่ใช่",
+    ansC: "ไม่ทราบ",
     desText:
-      "ตัวเลือกที่เหมาะสมที่สุดคือ 666666666666666666666666666666666666666666",
+      "เรื่องภาษากายสำคัญมาก เพราะเราต้องคอยสังเกตุว่าคู่นอนของเรา จริงๆ แล้วรู้สึกยังไงในเรื่องที่ขอไป",
   },
   {
     questionNo: 7,
-    question: " This is question number 7777777777?",
-    ansA: "Answer A : incorrect",
-    ansB: "Answer B : correct",
-    ansC: "Answer C : incorrect",
+    question: " 7.เราจะรู้ได้ยังไงบ้าง หากคู่นอนของคุณให้ Consent แล้ว?",
+    ansA: "ภาษากาย",
+    ansB: "น้ำเสียง",
+    ansC: "ทุกข้อที่กล่าวมา",
     desText:
-      "ตัวเลือกที่เหมาะสมที่สุดคือ 7777777777777777777777777777777777777777777",
+      "การให้ความใส่ใจกับปัจจัยพวกนี้เป็นเรื่องดี เพราะจะได้รู้ว่าคู่นอนเต็มใจให้ Consent กับเราจริงๆ",
   },
   {
     questionNo: 8,
-    question: " This is question number 8888888888?",
-    ansA: "Answer A : correct",
-    ansB: "Answer B : incorrect",
-    ansC: "Answer C : incorrect",
+    question: "8.หลังขอ Consent แล้ว ถ้าคู่นอนตอบกลับมาทำนองว่า “ก็ได้มั้ง” แบบนี้อาจหมายความว่าอย่างไร?",
+    ansA: "คู่นอนโอเคและอยากจะทำตามที่คุณขอ",
+    ansB: "คู่นอนยังไม่มั่นใจหรือไม่อยากตอบปฎิเสธไปตรงๆ ",
+    ansC: "ไม่ทราบ",
     desText:
-      "ตัวเลือกที่เหมาะสมที่สุดคือ 88888888888888888888888888888888888888888888888",
+      "ถ้าไม่มั่นใจว่าคู่นอนรู้สึกยังไงกับเรื่องที่ขอ ก็ให้พักไว้ก่อนจะดีกว่า",
   },
   {
     questionNo: 9,
-    question: " This is question number 9999999999?",
-    ansA: "Answer A : incorrect",
-    ansB: "Answer B : correct",
-    ansC: "Answer C : incorrect",
+    question: " 9.หากขอ Consent แล้วถูกปฎิเสธ ควรทำอย่างไร?",
+    ansA: "โน้มน้าวหรืออ้อนให้เปลี่ยนใจ",
+    ansB: "ค่อยถามอีกที เผื่อเปลี่ยนใจ",
+    ansC: "เคารพการตัดสินใจและเปลี่ยนไปทำอย่างอื่นกัน",
     desText:
-      "ตัวเลือกที่เหมาะสมที่สุดคือ 9999999999999999999999999999999999999999999999",
+    "ถ้าโดนปฎิเสธแล้ว ก็เคารพการตัดสินใจ และไปทำอย่างอื่นแทน",
   },
   {
     questionNo: 10,
-    question: " This is question number 10 10 10 10 10?",
-    ansA: "Answer A : correct",
-    ansB: "Answer B : incorrect",
-    ansC: "Answer C : incorrect",
+    question: "10.เมื่อเราได้ Consent แล้ว ในระหว่างเล่นเพลงรัก เราก็ยังบอกคู่นอนได้ว่า.....",
+    ansA: "จะขอพักยก",
+    ansB: "จะขอหยุด",
+    ansC: "ทุกข้อที่กล่าวมา",
     desText:
-      "ตัวเลือกที่เหมาะสมที่สุดคือ 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10",
+      "Consent เป็นเรื่องของการสื่อสารตลอดกิจกรรมเพศสัมพันธ์ ไม่ไหวก็ขอพักได้",
   },
 ];
 
 window.onload = function () {
-  startBtn = document.getElementById("myBtn");
-  startBtn.setAttribute("onclick", "startQuiz()");
   caller();
-  realBtn.style.display = "none";
-  boxx.style.display = "none";
-  realBox.style.display = "none";
+  startBtn.setAttribute("onclick", "startQuiz()");
+  kamui(realBtn);
+  kamui(boxx);
+  kamui(realBox);
 
   console.log("JS loaded");
 };
 
 function caller() {
+  startBtn = document.getElementById("myBtn");
   boxx = document.getElementById("surveyBox");
   startBox = document.getElementById("surveyStart");
   questionText = document.getElementById("question");
@@ -344,6 +344,10 @@ function caller() {
   userMessage = document.getElementById("message");
 }
 
+function kamui(varName) {
+  varName.style.display = "none";
+}
+
 function changeChoice() {
   questionText.innerHTML = questionArray[questionShowing].question;
   choiceA.innerHTML = questionArray[questionShowing].ansA;
@@ -357,7 +361,8 @@ function changeChoice() {
 }
 
 function startQuiz() {
-  startBox.style.display = "none";
+  kamui(startBox);
+
   boxx.style.display = "grid";
 
   choiceA.setAttribute("onclick", "nextQuestion(this.id)");
@@ -365,7 +370,8 @@ function startQuiz() {
   choiceC.setAttribute("onclick", "nextQuestion(this.id)");
   backBtn.setAttribute("onclick", "backQuestion()");
   backBtn2.setAttribute("onclick", "backQuestion2()");
-  backBtn.style.display = "none";
+  kamui(backBtn);
+
   realBtn.setAttribute("onclick", "showAns()");
   nextBtn.setAttribute("onclick", "nextQuestion2()");
 
@@ -391,7 +397,7 @@ function nextQuestion2() {
     changeChoice();
     highlightAns();
   } else {
-    realBox.style.display = "none";
+    kamui(realBox);
     startBox.style.display = "grid";
   }
   if (questionShowing == 10) {
@@ -407,7 +413,7 @@ function backQuestion() {
   questionShowing--;
   changeChoice();
   if (questionShowing == 1) {
-    backBtn.style.display = "none";
+    kamui(backBtn);
   }
 }
 
@@ -419,12 +425,13 @@ function backQuestion2() {
   changeChoice();
   highlightAns();
   if (questionShowing == 1) {
-    backBtn2.style.display = "none";
+    kamui(backBtn2);
   }
 }
 
 function quizFin() {
-  boxx.style.display = "none";
+  kamui(boxx);
+
   startBox.style.display = "grid";
   realBtn.style.display = "inline-block";
   var calScore = ansCheck();
@@ -448,9 +455,9 @@ function ansCheck() {
 }
 
 function restartX() {
-  startBox.style.display = "none";
+  kamui(startBox);
   boxx.style.display = "grid";
-  backBtn.style.display = "none";
+  kamui(backBtn);
   questionShowing = 1;
   ansSelected = [];
   changeChoice();
@@ -460,10 +467,12 @@ function showAns() {
   questionShowing = 1;
   ansSelected = [];
   changeChoice();
-  startBox.style.display = "none";
+  kamui(startBox);
+
   realBox.style.display = "grid";
   choiceA.disable = "true";
-  backBtn2.style.display = "none";
+  kamui(backBtn2);
+
   nextBtn.innerHTML = " ถัดไป ";
   highlightAns();
 }
