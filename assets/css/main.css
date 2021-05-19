@@ -2120,6 +2120,7 @@ button.button.large {
 
 #ansDes {
   word-wrap: break-word;
+  text-align: center;
 }
 /* Form */
 
@@ -3990,3 +3991,22 @@ margin-bottom: 1rem;
 #resBox button{
   width: 100%;
 }
+
+#bobo{
+  font-size: 1.5rem;
+}
+
+#surveyStart p{
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+#furLink {
+  color: deeppink;
+  font-size: 1.5rem;
+}
+
+#resultz{
+  font-size: 1.35rem;
+}
+

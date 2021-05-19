@@ -174,20 +174,8 @@
 //declare variable
 {
   var questionShowing = 1;
-  var boxx;
-  var textZa;
-  var startBox;
-  var questionText;
-  var choiceA;
-  var choiceB;
-  var choiceC;
-  var backBtn;
+
   var ansSelected = [];
-  var startBtn;
-  var jojo;
-  var userName;
-  var userEmail;
-  var userMessage;
   var correctAns = [
     "1choC",
     "2choA",
@@ -216,7 +204,7 @@
 }
 
 var questionArray = [
-  { ass: "you suck" },
+  { brown: "ร้ายกาจนักนะ" },
   {
     questionNo: 1,
     question: " 1.ควรขอ Consent ก่อนที่จะ.....",
@@ -316,8 +304,9 @@ window.onload = function () {
   kamui(realBtn);
   kamui(boxx);
   kamui(realBox);
-  kamui(formQuiz);
-
+  kamui(resBox);
+  kamui(furLink);
+  kamui(resultWrap);
   console.log("JS loaded");
 };
 
@@ -332,7 +321,6 @@ function caller() {
   choiceC = document.getElementById("choC");
   backBtn = document.getElementById("backz");
   backBtn2 = document.getElementById("backza");
-  textZa = document.getElementById("textZa");
   realBtn = document.getElementById("realz");
   surHead = document.getElementById("surveyHeader");
   ansDes = document.getElementById("ansDes");
@@ -346,6 +334,11 @@ function caller() {
   userMessage = document.getElementById("message");
   formQuiz = document.getElementById("formQuiz");
   resBox = document.getElementById("resBox");
+  scoreDesc = document.getElementById("scoreDesc");
+  bobo = document.getElementById("bobo");
+  furLink = document.getElementById("furLink");
+  resultWrap = document.getElementById("resultWrap");
+  resultz = document.getElementById("resultz");
 }
 
 function kamui(varName) {
@@ -378,6 +371,7 @@ function startQuiz() {
 
   realBtn.setAttribute("onclick", "showAns()");
   nextBtn.setAttribute("onclick", "nextQuestion2()");
+  kamui(bobo);
 
   changeChoice();
 }
@@ -435,11 +429,23 @@ function backQuestion2() {
 
 function quizFin() {
   kamui(boxx);
-
+  resultWrap.style.display = "block";
   startBox.style.display = "grid";
-  realBtn.style.display = "inline-block";
   var calScore = ansCheck();
-  textZa.innerHTML = "คุณทำได้ " + calScore + " คะแนนครับ.";
+  if (calScore >= 8) {
+    resultz.innerHTML = "ยินดีด้วย! คุณผ่านแบบทดสอบของเรา <3";
+    scoreDesc.innerHTML =
+      "คุณเข้าใจเรื่องconsentได้ดีเลยนะ เราหวังว่าคุณจะนำไปใช้ในชีวิตจริงด้วย ขอบคุณนะ :)";
+    kamui(startBtn);
+    kamui(furLink);
+  } else {
+    resultz.innerHTML = "เสียใจด้วย คุณยังไม่ผ่านแบบทดสอบของเรานะ ;(";
+    scoreDesc.innerHTML =
+      "เราขอแนะนำบทความนี้ให้คุณได้ลองอ่าน เพื่อให้คุณเข้าใจมากขึ้นนะ";
+    realBtn.style.display = "inline-block";
+    furLink.style.display = "inline";
+  }
+
   startBtn.innerHTML = " เริ่มใหม่ ";
   surHead.innerHTML = "ผลการทำควิซของคุณฮะ";
   startBtn.setAttribute("onclick", "restartX()");
@@ -490,18 +496,12 @@ function highlightAns() {
   jojo.style.backgroundColor = "pink";
 }
 
-function sendMessage() {
-  if (userName.value == "" || userMessage.value == "") {
-    alert("ยังส่งไม่ได้หรอกยังกรอกบางช่องไม่ครับรึเปล่านะ");
-  } else {
-    console.log(userName.value + " " + userMessage.value);
-
-    userName.value = "";
-    userMessage.value = "";
-    alert("ขอบคุณสำหรับความที่คิดเห็นที่ส่งมากนะครับบบ");
-  }
+function sendMore() {
+  kamui(resBox);
+  formQuiz.style.display = "block";
 }
 
+//sheetDB script คับพรี่
 var form = document.getElementById("sheetdb-form");
 form.addEventListener("submit", (e) => {
   console.log("runnnn");
