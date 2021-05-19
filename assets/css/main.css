@@ -2008,7 +2008,7 @@ input[type="reset"].large,
 input[type="button"].large,
 button.large,
 .button.large {
-  font-size: 1rem;
+  font-size: 1.3rem;
   height: fit-content;
   line-height: 2.2625rem;
   padding: 0 1.25rem;
@@ -2084,7 +2084,7 @@ button.primary:active,
   input[type="button"],
   button,
   .button {
-    font-size: 1rem;
+    font-size: 1.3rem;
     height: fit-content;
     line-height: 2.3rem;
   }
@@ -2094,7 +2094,7 @@ button.primary:active,
   input[type="button"].large,
   button.large,
   .button.large {
-    font-size: 1rem;
+    font-size: 1.3rem;
     height: fit-content;
     line-height: 2.75rem;
   }
@@ -2104,7 +2104,7 @@ button.primary:active,
   input[type="button"].small,
   button.small,
   .button.small {
-    font-size: 1rem;
+    font-size: 1.3rem;
     height: 3rem;
     line-height: 3rem;
   }
@@ -2244,7 +2244,7 @@ textarea:focus {
 label {
   color: #000000;
   display: block;
-  font-family: "Raleway", Helvetica, sans-serif;
+  font-family: sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   /* letter-spacing: 0.175em; */
@@ -2309,7 +2309,7 @@ input[type="radio"] + label {
   color: #000000;
   cursor: pointer;
   display: inline-block;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: sans-serif;
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 0.0375em;
@@ -2319,7 +2319,7 @@ input[type="radio"] + label {
   text-transform: none;
 }
 
-input[type="checkbox"] + label:before,
+/* input[type="checkbox"] + label:before,
 input[type="radio"] + label:before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2331,7 +2331,7 @@ input[type="radio"] + label:before {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-}
+} */
 
 input[type="checkbox"] + label:before,
 input[type="radio"] + label:before {
@@ -2415,13 +2415,13 @@ input[type="radio"] + label:before {
 
 /* Icon */
 
-.icon {
+/* .icon {
   text-decoration: none;
   border-bottom: none;
   position: relative;
-}
+} */
 
-.icon:before {
+/* .icon:before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -2432,9 +2432,9 @@ input[type="radio"] + label:before {
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
-}
+} */
 
-.icon > .label {
+/* .icon > .label {
   display: none;
 }
 
@@ -2444,7 +2444,7 @@ input[type="radio"] + label:before {
 
 .icon.brands:before {
   font-family: "Font Awesome 5 Brands";
-}
+} */
 
 /* Image */
 
@@ -2728,7 +2728,7 @@ div.actions {
   display: flex;
   cursor: default;
   list-style: none;
-  margin-left: -1rem;
+  margin-left: 0;
   padding-left: 0;
   flex-direction: column;
 }
@@ -3977,4 +3977,16 @@ body.is-ie #wrapper > section > .content > section {
 
 u {
   color: deeppink !important;
+}
+
+#resBox p {
+color: deeppink;
+font-family: "Itim";
+font-size: 1.3rem;
+text-align: center;
+margin-bottom: 1rem;
+}
+
+#resBox button{
+  width: 100%;
 }

@@ -223,12 +223,12 @@ var questionArray = [
     ansA: "จับมือ",
     ansB: "เล่นสัมพันธ์สวาท",
     ansC: "ทุกข้อที่กล่าวมา",
-    desText:
-      "เพราะ Consent ควรขอก่อนจะมีการปฏิสัมพันธ์ในทุกกรณี",
+    desText: "เพราะ Consent ควรขอก่อนจะมีการปฏิสัมพันธ์ในทุกกรณี",
   },
   {
     questionNo: 2,
-    question: " 2.การขอ Consent ไม่ได้หมายถึงแค่การตอบตกลงหรือปฏิเสธอย่างเดียว มันรวมถึงการสื่อสารกับคู่นอนของคุณในสิ่งที่คุณทั้งคู่ต้องการ",
+    question:
+      " 2.การขอ Consent ไม่ได้หมายถึงแค่การตอบตกลงหรือปฏิเสธอย่างเดียว มันรวมถึงการสื่อสารกับคู่นอนของคุณในสิ่งที่คุณทั้งคู่ต้องการ",
     ansA: "ถูก",
     ansB: "ผิด",
     ansC: "ไม่ทราบ",
@@ -282,7 +282,8 @@ var questionArray = [
   },
   {
     questionNo: 8,
-    question: "8.หลังขอ Consent แล้ว ถ้าคู่นอนตอบกลับมาทำนองว่า “ก็ได้มั้ง” แบบนี้อาจหมายความว่าอย่างไร?",
+    question:
+      "8.หลังขอ Consent แล้ว ถ้าคู่นอนตอบกลับมาทำนองว่า “ก็ได้มั้ง” แบบนี้อาจหมายความว่าอย่างไร?",
     ansA: "คู่นอนโอเคและอยากจะทำตามที่คุณขอ",
     ansB: "คู่นอนยังไม่มั่นใจหรือไม่อยากตอบปฎิเสธไปตรงๆ ",
     ansC: "ไม่ทราบ",
@@ -295,12 +296,12 @@ var questionArray = [
     ansA: "โน้มน้าวหรืออ้อนให้เปลี่ยนใจ",
     ansB: "ค่อยถามอีกที เผื่อเปลี่ยนใจ",
     ansC: "เคารพการตัดสินใจและเปลี่ยนไปทำอย่างอื่นกัน",
-    desText:
-    "ถ้าโดนปฎิเสธแล้ว ก็เคารพการตัดสินใจ และไปทำอย่างอื่นแทน",
+    desText: "ถ้าโดนปฎิเสธแล้ว ก็เคารพการตัดสินใจ และไปทำอย่างอื่นแทน",
   },
   {
     questionNo: 10,
-    question: "10.เมื่อเราได้ Consent แล้ว ในระหว่างเล่นเพลงรัก เราก็ยังบอกคู่นอนได้ว่า.....",
+    question:
+      "10.เมื่อเราได้ Consent แล้ว ในระหว่างเล่นเพลงรัก เราก็ยังบอกคู่นอนได้ว่า.....",
     ansA: "จะขอพักยก",
     ansB: "จะขอหยุด",
     ansC: "ทุกข้อที่กล่าวมา",
@@ -315,6 +316,7 @@ window.onload = function () {
   kamui(realBtn);
   kamui(boxx);
   kamui(realBox);
+  kamui(formQuiz);
 
   console.log("JS loaded");
 };
@@ -342,6 +344,8 @@ function caller() {
   userName = document.getElementById("name");
   //   userEmail = document.getElementById("email");
   userMessage = document.getElementById("message");
+  formQuiz = document.getElementById("formQuiz");
+  resBox = document.getElementById("resBox");
 }
 
 function kamui(varName) {
@@ -497,3 +501,21 @@ function sendMessage() {
     alert("ขอบคุณสำหรับความที่คิดเห็นที่ส่งมากนะครับบบ");
   }
 }
+
+var form = document.getElementById("sheetdb-form");
+form.addEventListener("submit", (e) => {
+  console.log("runnnn");
+  e.preventDefault();
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(document.getElementById("sheetdb-form")),
+  })
+    .then((response) => response.json())
+    .then((html) => {
+      console.log(userName.value + " " + userMessage.value);
+      userName.value = "";
+      userMessage.value = "";
+      kamui(formQuiz);
+      resBox.style.display = "block";
+    });
+});

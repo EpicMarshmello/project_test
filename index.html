@@ -7,12 +7,12 @@
 <html>
 
 <head>
-	<title>Consent *CONFIRM*</title>
+	<title>Consent *CONFIRM* 19/5</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<link rel="shortcut icon" type="image/jpg" href="favicon_io/favicon-32x32.png"/>
+	<link rel="shortcut icon" type="image/jpg" href="favicon_io/favicon-32x32.png" />
 
 	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
@@ -169,30 +169,38 @@
 			</header>
 			<div class="content">
 				<p> หวังว่าคุณจะได้เนื้อหา และข้อมูลที่มีประโยชน์จากเว็บไซต์ของเรา เราต้องการสร้างการรับรู้เกี่ยวกับ
-					consent และอยากให้ใครที่มีแนวคิดคล้ายกันมาร่วมสร้างการเคลื่อนไหว เพื่อขยายการรับรู้ในเรื่องนี้ <br>
+					consent และอยากให้ใครที่มีแนวคิดคล้ายกันมาร่วมสร้างการเคลื่อนไหว เพื่อขยายการรับรู้ในเรื่องนี้
+					<br>
 					<br> ดังนั้นหากคุณมีความคิดเห็นยังไงเกี่ยวกับเรื่องนี้ ช่วยบอกเราด้วย
 					เรายินดีและเคารพความเห็นของคุณท่าน หรือคิดว่าเนื้อหาส่วนใดที่เรานำเสนอแล้วคุณมีความเห็นอีกมุม
-					เราก็สนใจและต้องการที่จะรับฟังความเห็นเหล่านั้น ขอบคุณทุกที่อ่านเนื้อหาของเรา</p> 
-				<form>
-					<div class="fields">
-						<div class="field">
-							<input type="text" name="name" id="name" placeholder=" ชื่อของคุณ " />
-						</div>
-						<!-- <div class="field half">
+					เราก็สนใจและต้องการที่จะรับฟังความเห็นเหล่านั้น ขอบคุณทุกที่อ่านเนื้อหาของเรา
+				</p>
+				<div class="content" id="formQuiz">
+					<form action="https://sheetdb.io/api/v1/atvotrh74ncta" method="POST" id="sheetdb-form">
+						<div class="fields">
+							<div class="field">
+								<input type="text" required name="data[name]" id="name" placeholder=" ชื่อของคุณ " />
+							</div>
+							<!-- <div class="field half">
 							<input type="email" name="email" id="email" placeholder="อีแมว เอ้ย อีเมล์" />
 						</div> -->
-						<div class="field">
-							<textarea name="message" id="message" placeholder=" ความคิดเห็นของคุณ " rows="3"></textarea>
+							<div class="field">
+								<textarea name="data[message]" required id="message" placeholder=" ความคิดเห็นของคุณ "
+									rows="3"></textarea>
+							</div>
 						</div>
-					</div>
-					<ul class="actions">
-						<li><input type="button" onclick="sendMessage()" value=" ส่งความคิดเห็น "
-								class="button primary" /></li>
-					</ul>
-				</form>
+						<ul class="actions">
+							<li><input type="submit" value=" ส่งความคิดเห็น " class="button primary" /></li>
+						</ul>
+					</form>
+				</div>
+				<div id="resBox">
+					<p>ขอบคุณสำหรับความคิดเห็นน้าาาาาา</p>
+					<button class="button large primary" onclick=""> ส่งความคิดเห็นเพิ่ม </button>
+				</div>
 			</div>
 		</section>
-
+<br><br>
 		<!-- Copyright -->
 		<div class="copyright">&copy;All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.
 		</div>
