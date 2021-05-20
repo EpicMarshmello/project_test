@@ -339,6 +339,7 @@ function caller() {
   furLink = document.getElementById("furLink");
   resultWrap = document.getElementById("resultWrap");
   resultz = document.getElementById("resultz");
+  wowSound = document.getElementById("wowSound");
 }
 
 function kamui(varName) {
@@ -501,6 +502,10 @@ function sendMore() {
   formQuiz.style.display = "block";
 }
 
+function playsound() {
+  wowSound.play();
+}
+
 //sheetDB script คับพรี่
 var form = document.getElementById("sheetdb-form");
 form.addEventListener("submit", (e) => {
@@ -517,5 +522,6 @@ form.addEventListener("submit", (e) => {
       userMessage.value = "";
       kamui(formQuiz);
       resBox.style.display = "block";
+      playsound();
     });
 });
