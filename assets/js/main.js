@@ -174,7 +174,7 @@
 //declare variable
 {
   var questionShowing = 1;
-
+  var score = 0;
   var ansSelected = [];
   var correctAns = [
     "1choC",
@@ -456,12 +456,14 @@ function quizFin() {
 }
 
 function ansCheck() {
-  var score = 0;
+  console.log(score);
+  score = 0;
   for (let runner = 0; runner < ansSelected.length; runner++) {
     if (ansSelected[runner] == correctAns[runner]) {
       score++;
     }
   }
+  console.log(score);
   return score;
 }
 
