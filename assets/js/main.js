@@ -175,6 +175,7 @@
 {
   var questionShowing = 1;
   var score = 0;
+  var scoreText = "score ";
   var ansSelected = [];
   var correctAns = [
     "1choC",
@@ -456,14 +457,15 @@ function quizFin() {
 }
 
 function ansCheck() {
-  console.log(score);
   score = 0;
+  scoreText = "score ";
   for (let runner = 0; runner < ansSelected.length; runner++) {
     if (ansSelected[runner] == correctAns[runner]) {
       score++;
     }
   }
-  console.log(score);
+  scoreText += score;
+  console.log(scoreText);
   return score;
 }
 
