@@ -309,7 +309,7 @@ window.onload = function () {
   kamui(resBox);
   kamui(furLink);
   kamui(resultWrap);
-  console.log("JS loaded");
+  console.log("JS loaded 10.5");
 };
 
 function caller() {
