@@ -175,6 +175,7 @@
 {
   var questionShowing = 1;
   var score = 0;
+  var quizDone = false;
   var scoreText = "score ";
   var ansSelected = [];
   var correctAns = [
@@ -430,6 +431,7 @@ function backQuestion2() {
 }
 
 function quizFin() {
+  quizDone = true;
   kamui(boxx);
   resultWrap.style.display = "block";
   startBox.style.display = "grid";
@@ -451,9 +453,8 @@ function quizFin() {
   startBtn.innerHTML = " เริ่มใหม่ ";
   surHead.innerHTML = "ผลการทำควิซของคุณฮะ";
   startBtn.setAttribute("onclick", "restartX()");
-  questionShowing = 1;
-  ansSelected = [];
-  changeChoice();
+  quizDone = false;
+
 }
 
 function ansCheck() {
