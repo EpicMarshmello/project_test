@@ -453,8 +453,6 @@ function quizFin() {
   startBtn.innerHTML = " เริ่มใหม่ ";
   surHead.innerHTML = "ผลการทำควิซของคุณฮะ";
   startBtn.setAttribute("onclick", "restartX()");
-  quizDone = false;
-
 }
 
 function ansCheck() {
@@ -471,6 +469,8 @@ function ansCheck() {
 }
 
 function restartX() {
+  quizDone = false;
+
   kamui(startBox);
   boxx.style.display = "grid";
   kamui(backBtn);
@@ -480,6 +480,8 @@ function restartX() {
 }
 
 function showAns() {
+  quizDone = false;
+
   questionShowing = 1;
   ansSelected = [];
   changeChoice();
